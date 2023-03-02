@@ -1,0 +1,17 @@
+Remove Duplicates: We can select tthe particular column and select on the Remove Duplicates under the Data tab to remove the duplicate values.
+                   it will automatically choose all the columns present in the data sheet for the search.
+
+Converting the letter to upper/lower case: We can use the Upper(Value) and Lower(Value) function to change the text value.
+
+We can use the Propper(Value) to change the text to lower case where every first letter of each text will upper and remaining will be lower.
+
+TRIM(Value): It is used to trim the space from left, right and middle of the text.
+
+we can select the inconsistant date format and convert the whole to Short date format.
+
+We can keep the salary column in the form of numbers to keep it good for further calculation in the SQL and Python.
+
+We can copy all the fixed column values and paste it as Value so the it will be pasted as text value rather than a formula.
+
+Note: Before deleting anything from excel make sure that keep the extra copy of the data.
+

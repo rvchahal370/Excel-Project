@@ -1,0 +1,62 @@
+XLookUP: It is used to search for a particular record in the table data.
+         Example: XLOOKUP(LookUP value, LookUP Array, return Array,[if not found])
+         Lookup value: it is a value which we are searching for.
+         Lookup Array: It is Array where are are searching for the value.
+         Return array: it is the value which the formula return after the successful search.
+         [id not found]: it is a option field which defines the value in case of unsuccesful search.
+         Formula will be XLOOKUP(A3,H2:H10,P2:P10)
+         where we are searching for A3 which is =XLOOKUP(A3,H2:H10,P2:P10) in the H2:H10 (Full Name field) and it will return his email id from (P2:P10)
+
+XLookup with multiple Rows: It is used to search for the particular records and will return multiple columns.
+                            Example: XLOOKUP(A3,I2:I10,O2:P10) => In this O2:P10 describes the range of records which will return.
+                            Downside of this is all the records will return in the same way as it was presented in the excel. Means if the columns are together then it will be showing in the same way in the final output
+
+XLookUP Exact Match:        It is the search for the particular records using Exact Match.
+                            Exact Match 0 => Exact Match(Default)
+                            Exact Match -1 => Exact match or next smaller item
+                            Exact Match 1 => Exact match or next larger item
+                            Exact Match 2 => Wildcard character match
+                            
+                            Example 1: XLOOKUP("*"& A4,H2:H10,O2:O10, "Not Found",2)) => we have mentioned the "*" in the starting because it will match with the last character only in the full name(H2:H10) field. First name in the same field will be ignored.
+                            So it will search for Beasley in the full name and expecting first name can be anything with the help of wildcard character match(2). If their will be no match than it will return "Nor Found".
+
+                            Example 2: XLOOKUP(A5 & "*",H2:H10,O2:O10, "Not Found",2)) => In this example formula is ignoring second name/text string and searching only first name/text string match in the Full name column.
+
+                            Example 3: XLOOKUP(A3, N2:N10, I2:I10,, 1) => In this 1 means it returns the exact match or next larger item. Date mentioned in the A3 is not available in the table so it will seach for the next larger date and return it as output.
+
+
+XLookUP Search Order:       By default the search order is top to bottom but we can change it in the XLookUP formula.
+                            Search Mode 1 => Search first to last
+                            Search Mode -1 => Search last to first
+                            Search Mode 2 => Binary Search (Sorted ASC order)
+                            Search Mode -2 => Binary Search (Sorted DESC order)
+
+                            Example: XLOOKUP(A4,N2:N10,I2:I10,,,-1) => "-1" means it will sort last to first (bottom to top) if there are common records.
+                            In the above example we were having two common dates but it returned Michael Scott as a full name because that was first from bottom.
+
+XLookUP Horizontal:         In this we will search by row for the specific text value and return the amount from the selected row.
+                            Example: XLOOKUP(I1,H1:S1,H2:S2) => In this we will search for the Feburary month from the whole month row and return the amount from the paper row for the Feb month.
+
+SUM(XLOOKUP(Value):XLOOKUP(Value)): We can add two XLOOKUPs through this formula.
+                                    Example: SUM(XLOOKUP(I1,H1:S1,H2:S2):XLOOKUP(J1,H1:S1,H2:S2)) => In the formula we are adding paper xlookup values for the month of Feburary and March.
+
+VLOOKUP(Vallue):            This formula is used to search for the particular text value from the selected table array and then returns athe match value for the mentioned column number
+                            Formula: VLOOKUP(Lookup_value, table_array, col_index_num, [range_lookup])
+                            Lookup_value: It is the value which we are searching in the table.
+                            Table_array: It is selected columns in which we are searching for the lookup_value.
+                            col_index_num: It is the number for the column which returns the value for the matching text after the successful search.
+                            [range_lookup]: it can be of two types:
+                                            True: Approximate match
+                                            False: Exact match 
+
+                            Example: VLOOKUP(A3,H2:O10,8,FALSE) => In the example we are looking for the search for specific full name(A3) from the selected table array(H2:O10)
+                                     and returning the value from column number 8 (Email column) with the Exact match.
+
+Drawback of VLOOKUP:  In the VLOOKUP we have to add the particular column number but in the future if we are adding any extra column in between the selected table array then the output will be changed.
+                      in the above example if we are adding the Address column in between the selected array table then the value for the column number 8 will be changed to Enddate column.
+                      Now it will show the output from Enddate column instead of Email column which is not correct and inconvenient for the end user as they have to change the column number manually. 
+                      Due to that XLOOKUP came into picture as value of the final output will not be change in the XLOOKUP even after adding the extra column in between the select array table.
+
+ 
+
+

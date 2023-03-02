@@ -1,0 +1,24 @@
+Conditional Formatting:
+
+It is used to represent the data with the different colurs and icons based on the different condition.
+
+We can use it through the Conditional Formatting option available under the Home Tab.
+
+We can use the Data Bars and Top/Bottom rules to coloring the data base on the particular conditions.
+
+lastly, there is highlight cells rules which will be mostlly used in the condition formatting.
+
+Among that most used options are Text that contains and Duplicate values.
+
+We can create new rules with the formulas in the conditional fomatting. All we have to do is select the particular column data and apply the formula on the same.
+
+we can add different charts based on the existing data.
+
+To do that we have to go under the insert tab and choose the data before applying the charts.
+
+We can add or remove columns and rows to the chart.
+
+
+
+ 
+

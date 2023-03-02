@@ -1,0 +1,110 @@
+We can performe the data analysis through the Pivot table in excel.
+
+Firstly, we have to open the excel and can click on the Pivot table under the insert.
+
+Automatically it will select the whole data from the selected excel but if not then we can select it
+through shift + ctrl + right arrow + down arrow
+
+Thereafter new sheet will be created with the pivot table, where we can perform different analysis.
+
+Finally, we will be having all the columns showing under the PivotTable Fields and we can use them under the 
+Filters, Columns, Rows and Values field.
+
+Filters: with the help of filters, we can filter the data according to the selected fields,
+Example: choosing Gender and Age group field, we can filter the Revenue, profit, cost according to that fields.
+
+Columns: we can use the column field to show the data in the different column range.
+Example: Selecting Year in the column field, we can filter the Profit for each year respectively.
+
+Rows: while using rows we can show the data in the different row range. we can show the expanded or collapsed row data as well.
+Example: we can choosed Country and city under Rows to show the Revenue for the different countries correspondance to the cities as well.
+
+Values: Under the value we can calculate the final value of the data.
+Example: while choosing Profit column under the values, we can show the sum of the profit for each country and city.
+
+=> we can add extra calculated field through the Fields, Items, & Sets column under the Anallyze option.
+Under that field we can select any number of fields and set the formula for them.
+
+Formulas in the excel:
+MIN(Value): Calculating the minimum value among all selected one
+MAX(Value): Calculating the maximum value among all selected one
+IF(Value):  Using the if else condition. Example: IF(F1:F10 > 30, "OLD", "YOUNG")=> If the value of the selected columns is more than 30 then "OLD" will be printed other wise "YOUNG" will be printed.
+IFS(Value): Used to show multiple outputs based on the multiple conditions:
+            Example: IFS(F2:F10="Salesman", "DP3", F2:F10 = "HR", "DP4", F2:F10 = "Receptionist", "DP5", F2:F10 = "Regional Manager", "DP1")
+            If the value of the selected column is "Salesman" then "DP3" will be printed.
+            If the value of the selected column is "HR" then "DP4" will be printed.
+            If the value of the selected column is "Receptionist" then "DP5" will be printed.
+            If the value of the selected column is "Regional Manager" then "DP1" will be printed.
+
+Len(Value):  Used to find the length of the particular column data. Example: Len(C1:C10).
+             Can be used to see difference between 100s and thousands. Can find bad Social Security numbers if they're 10 digits instead of 9.
+
+Left(Value): It is used like Substring, Fetcing the right part of character till the limit has been given.
+             Example: Left(B1:B10,3) => It is providing the first three characters of the column.
+
+Right(Value: It is used like Substring, Fetcing the right part of character till the limit has been given.
+             Example: Right(B1:B10,3) => It is providing the last three characters of the column.
+
+TEXT(Value): It is used to convert date format to text format.
+             Example: TEXT(I4:I12, "dd/mm/yyyy") => It will convert date into the "dd/mm/yyyy" text format.
+
+TRIM(Value): It is used to remove the unwanted space from the columns data.
+             Example: TRIM(C1:C10) => It removes the unwanted space from left and right side of the "last name" column data.
+
+CONCATENATE(Value): It is used to concatinate two strings or different columns data.
+                    Example 1: CONCATENATE(B1:B10, " ", C2:C10) => it is used to concatenate first name and last name. the output will be first_name + Last_name
+                    Example 2: CONCATENATE(B1:B10, ".", C2:C10, "@gmail.com") => output will be gmail id including first name and last name
+
+SUBSTITUE(Value):   It is used to replace the value which is already there to the given value in the Substitute formula.
+                    Example 1: SUBSTITUTE(I2:I10, "-", "/") => It will be usedfull if in the date field their are two different formats by mistake then we can change it to only correct format through the same formula.
+                    Example 2: SUBSTITUTE(I2:I10, "/", "-") => It is used to replace the "/" symbol from all the data in the specific date column to "-" symbol
+                    SUBSTITUTE with 1st instance: it is used to replace the vale only on the first instance of the text field.
+                    Example: SUBSTITUE(I2:I10, "/", "-", 1) => It replace the "/" symbol to "-" only for the first match   
+                    SUBSTITUTE with 2nd instance: it is used to replace the vale only on the second instance of the text field.
+                    Example: SUBSTITUE(I2:I10, "/", "-", 2) => It replace the "/" symbol to "-" only for the second match 
+
+SUM(Value):         It is used to total the values for the specific column.
+                    Example: SUM(G2:G10) => It will add all the salaries and shows the final result.
+
+SUMIF(Value):       It is used to total the values for the specific column based on the specific condition.
+                    Example: SUMIF(G2:210, ">50000") => It will add all the salary column where salary is more than 50000
+   
+SUMIFS(Value):      It can be used to get the total with the multiple if conditions.
+                    Example: SUMIFS(G2:G10,E2:E10,"Female",D2:D10,">29") => It will add the salary if Gender is female and age is greater than 29
+
+COUNT(Value):       It is used to count the number of records/rows for the particular column.
+                    Example: COUNT(G2:G10) => It will return the number of records/rows available for the salary column.
+
+COUNTIF(Value):     It is used to return number of records with respect to the specific condition.
+                    Example: COUNTIF(G2:G10, ">43000") => It returns the number of records from the salary column where salary is greater then 43000
+
+COUNTIFS(Value):    Its returns the number of records for the particular column base on multiple IF conditions.
+                    Example: COUNTIFS(A2:A10, ">1004", E2:E10, "Female") => It return the number of records available for the EmployeeId column where Id is greater than 1004 and Gender is Female
+
+DAYS(Value):        It is used to return number of days base on the given start date and end date.
+                    Example: DAYS(end_date, start_date) = DAYS(I2,H2) => It returns number of days available between end_date from I column and start date from H column
+
+NETWORKDAYS(Value): It returns number of days available based on start date and end date excluding holidays and weekends.
+                    Example: NETWORKDAYS(start_date, end_date) = NETWORKDAYS(H2,I2) Note: it is taking [Holiday] as its third column whicch will be having default holidays and weekend values.
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
